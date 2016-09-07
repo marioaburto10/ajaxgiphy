@@ -25,7 +25,7 @@
 				var originalURL = value.images.original.url;
 
 				var newGif = $('<img>');
-				newGif.addClass('gif')
+				newGif.addClass('gif img-rounded')
 				newGif.attr('src', stillUrl);
 
 				$('#cars').append(newGif);
@@ -59,10 +59,10 @@
 		
 		for (var i = 0; i < cars.length; i++){
 
-
 			
-		    var gifbtn = $('<button>') 
-		    gifbtn.addClass('car'); 
+			
+		    var gifbtn = $('<button class="car btn btn-primary">') 
+		    // gifbtn.addClass('car btn btn-primary'); 
 		    gifbtn.attr('data-name', cars[i]);
 		    gifbtn.text(cars[i]);
 		    $('#CarTypes').append(gifbtn); 

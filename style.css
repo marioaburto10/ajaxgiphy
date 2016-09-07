@@ -1,0 +1,14 @@
+body {
+	background: url("background1.jpg");
+}
+
+button, div, form, input {
+	margin: 10px;
+}
+
+img{
+   	max-width: 200px;
+    border: 2px solid black;
+    margin: 20px;
+
+}
