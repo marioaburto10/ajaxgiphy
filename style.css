@@ -1,5 +1,5 @@
 body {
-	background: url("background1.jpg");
+	background: url("lightblue.jpg");
 }
 
 button, div, form, input {
@@ -10,5 +10,10 @@ img{
    	max-width: 200px;
     border: 2px solid black;
     margin: 20px;
+    /*float: right;*/
 
+}
+
+#gif, p {
+  position: relative;
 }
