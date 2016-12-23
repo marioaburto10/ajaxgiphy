@@ -5,14 +5,12 @@
 	function displayCarGifs(){
 
 		var car = $(this).attr('data-name');
-		var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + car + "&api_key=dc6zaTOxFJmzC&limit=10";
+		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + car + "&api_key=dc6zaTOxFJmzC&limit=10";
 		
 		
 		$.ajax({url: queryURL, method: 'GET'}).done(function(response) {
 
         for (var i = 0; i < response.data.length; i++) {
-
-          var pRating = $('<p>').text("Rating: " + response.data[i].rating);
           // var br = $('<br>');
           var newGif = $('<img>');
           newGif.attr('src', response.data[i].images.original_still.url);
@@ -22,7 +20,7 @@
           newGif.addClass('img-rounded');
           newGif.attr('id', 'gif');
 
-          $('#cars').append(pRating, newGif);
+          $('#cars').append(newGif);
         }
 
 	   })
